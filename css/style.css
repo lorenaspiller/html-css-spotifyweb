@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #141922;
+  height: 100vh;
+}
+
+/* main */
+main {
+  display: flex;
+  height: calc(100% - 80px);
+}
+
+aside {
+  background-color: #FFB7B2;
+  width: 300px;
+  height: 100%;
+}
+
+.spotify__inner {
+  background-color: #B5EAD7;
+  width: calc(100% - 300px);
+  position: relative;
+}
+
+.upgrade {
+  background-color: rgba(255, 250, 182, .5);
+  height: 60px;
+  position: fixed;
+  left: 300px;
+  top: 0;
+  right: 0;
+  z-index: 12;
+}
+/* /main */
+
+/* footer */
+footer {
+  background-color: #C7CEEA;
+  height: 80px;
+}
+/* /footer */
