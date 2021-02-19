@@ -43,6 +43,10 @@ aside {
   padding: 10px 10px 0 15px;
 }
 
+.logo__small {
+  display: none;
+}
+
 aside a {
   color: #666666;
 }
@@ -51,8 +55,8 @@ aside a:hover {
   color: #fff;
 }
 
-.spotify__logo img {
-  width: 60%;
+.spotify__logo .logo__big {
+  width: 55%;
 }
 
 .spotify__main_nav {
@@ -101,10 +105,25 @@ aside a:hover {
   overflow: auto;
 }
 
+.install {
+  display: flex;
+  align-items: center;
+}
+
+.install__link {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.download__ico {
+  width: 15px;
+  margin-right: 10px;
+}
 
 hr {
-  width: 80%;
+  width: 100%;
   margin: 10px auto;
+  opacity: 0.7
 }
 
 .aside__bottom {
@@ -112,9 +131,18 @@ hr {
   background-color: #000;
 }
 
-.install {
+.spotify__account {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
+}
+
+.profile__ico {
+  width: 20px;
+  height: auto;
+  border-radius: 50%;
+  background-color: #a3a3a3;
+  margin-right: 10px;
 }
 /* /aside */
 
@@ -145,5 +173,22 @@ footer {
 /* /footer */
 
 /* RESPONSIVE */
+@media screen and (max-width: 576px) {
+  aside {
+    width: 60px;
+  }
+  .mobile-hidden {
+    display: none;
+  }
 
+  .logo__small {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+
+  .upgrade {
+    left: 60px;
+  }
+}
 /* /RESPONSIVE */

@@ -24,7 +24,8 @@
       <aside>
         <!-- spotify logo -->
         <div class="spotify__logo">
-          <img src="img/logo.svg" alt="logo spotify">
+          <img class="logo__small" src="img/logo-small.svg" alt="logo spotify small">
+          <img class="logo__big mobile-hidden" src="img/logo.svg" alt="logo spotify">
         </div>
         <!-- /spotify logo -->
 
@@ -32,20 +33,20 @@
         <nav class="spotify__main_nav">
           <ul class="main_nav__list">
             <li>
-              <img class="aside__ico" src="img/home.svg" alt=""><a href="">Home</a>
+              <img class="aside__ico" src="img/home.svg" alt=""><a href="" class="mobile-hidden">Home</a>
             </li>
             <li>
-              <img class="aside__ico" src="img/search.svg" alt="search"><a href="">Cerca</a>
+              <img class="aside__ico" src="img/search.svg" alt="search"><a href="" class="mobile-hidden">Cerca</a>
             </li>
             <li>
-              <img class="aside__ico" src="img/libreria.svg" alt="library"><a href="">La tua libreria</a>
+              <img class="aside__ico" src="img/libreria.svg" alt="library"><a href="" class="mobile-hidden">La tua libreria</a>
             </li>
           </ul>
         </nav>
         <!-- /spotify main nav -->
 
         <!-- spotify playlist -->
-        <div class="spotify__playlist">
+        <div class="spotify__playlist mobile-hidden">
 
           <h5 class="text-uppercase">playlist</h5>
 
@@ -78,16 +79,16 @@
         <div class="aside__bottom">
           <!-- installa app -->
           <div class="install">
-            <img class="aside__ico" src="img/download.svg" alt="download">
-            <a href="" class="install__link">Installa app</a>
+            <img class="download__ico" src="img/download.svg" alt="download">
+            <a href="" class="install__link mobile-hidden">Installa app</a>
           </div>
           <!-- /installa app -->
 
-          <hr>
+          <hr class="mobile-hidden">
 
           <div class="spotify__account">
-            <img class="aside__ico" src="img/profile.svg" alt="profile">
-            <span>Jon Doe</span>
+            <img class="profile__ico" src="img/profile.svg" alt="profile">
+            <span class="mobile-hidden">Jon Doe</span>
           </div>
 
         </div>
