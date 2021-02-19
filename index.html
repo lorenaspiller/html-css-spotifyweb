@@ -23,7 +23,7 @@
       <!-- aside menu -->
       <aside>
         <!-- spotify logo -->
-        <div class="spotify__logo">
+        <div class="spotify__logo p_left">
           <img class="logo__small" src="img/logo-small.svg" alt="logo spotify small">
           <img class="logo__big mobile-hidden" src="img/logo.svg" alt="logo spotify">
         </div>
@@ -32,13 +32,13 @@
         <!-- spotify main nav -->
         <nav class="spotify__main_nav">
           <ul class="main_nav__list">
-            <li>
+            <li class="p_left">
               <img class="aside__ico" src="img/home.svg" alt=""><a href="" class="mobile-hidden">Home</a>
             </li>
-            <li>
+            <li class="p_left">
               <img class="aside__ico" src="img/search.svg" alt="search"><a href="" class="mobile-hidden">Cerca</a>
             </li>
-            <li>
+            <li class="p_left">
               <img class="aside__ico" src="img/libreria.svg" alt="library"><a href="" class="mobile-hidden">La tua libreria</a>
             </li>
           </ul>
@@ -46,18 +46,22 @@
         <!-- /spotify main nav -->
 
         <!-- spotify playlist -->
-        <div class="spotify__playlist mobile-hidden">
+        <div class="spotify__playlist mobile-hidden p_left">
 
-          <h5 class="text-uppercase">playlist</h5>
+          <!-- playlist top -->
+          <div class="playlist_top">
+            <h5 class="text-uppercase">playlist</h5>
 
-          <div class="playlist__create">
-            <a href="">
-              <span class="playlist_add">
-                <i class="plus fas fa-plus"></i>
-              </span>
-              Crea Playlist
-            </a>
+            <div class="playlist__create">
+              <a href="">
+                <span class="playlist_add">
+                  <i class="plus fas fa-plus"></i>
+                </span>
+                Crea Playlist
+              </a>
+            </div>
           </div>
+          <!-- /playlist top -->
 
           <!-- playlist list -->
           <div class="playlist__list">
@@ -76,7 +80,7 @@
         <!-- /spotify playlist -->
 
         <!-- aside bottom -->
-        <div class="aside__bottom">
+        <div class="aside__bottom p_left">
           <!-- installa app -->
           <div class="install">
             <img class="download__ico" src="img/download.svg" alt="download">
@@ -100,7 +104,7 @@
       <div class="spotify__inner">
         <!-- upgrade bar -->
         <div class="upgrade">
-
+          <a href="" class="btn text-uppercase">effettua l'upgrade</a>
         </div>
         <!-- /upgrade bar -->
 

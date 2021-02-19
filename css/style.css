@@ -18,12 +18,36 @@ li {
 
 a {
   text-decoration: none;
+  color:#fff;
 }
 
 .text-uppercase {
   text-transform: uppercase;
 }
+
+.p_left {
+  padding-left: 15px;
+}
 /* /MIX */
+
+/* BUTTONS */
+.btn {
+  background-color: transparent;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  margin-right: 20px;
+  transition: .6s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* /BUTTONS */
+
 
 
 /* main */
@@ -40,7 +64,7 @@ aside {
   height: 100%;
   background-color: #000;
   overflow: hidden;
-  padding: 10px 10px 0 15px;
+  padding-top: 15px;
 }
 
 .logo__small {
@@ -72,15 +96,21 @@ aside a:hover {
   font-size: 13px;
 }
 
+.main_nav__list li:first-of-type {
+  border-left: 3px solid limegreen;
+}
+
 .aside__ico {
   width: 30px;
   opacity: 0.7;
 }
 
+.playlist_top {
+  height: 80px;
+}
+
 .spotify__playlist {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  height: calc(100% - 80px);
   overflow: hidden;
 }
 
@@ -121,9 +151,9 @@ aside a:hover {
 }
 
 hr {
-  width: 100%;
-  margin: 10px auto;
-  opacity: 0.7
+  width: 90%;
+  margin: 10px 0;
+  opacity: 0.7;
 }
 
 .aside__bottom {
@@ -148,13 +178,16 @@ hr {
 
 /* spotify inner */
 .spotify__inner {
-  background-color: #B5EAD7;
+  background-color: #141922;
   width: calc(100% - 250px);
   position: relative;
 }
 
 .upgrade {
-  background-color: rgba(255, 250, 182, .5);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .5);
   height: 60px;
   position: fixed;
   left: 250px;
