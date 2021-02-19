@@ -6,8 +6,24 @@
 
 body {
   background-color: #141922;
+  color: #fff;
   height: 100vh;
 }
+
+/* MIX */
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+/* /MIX */
+
 
 /* main */
 main {
@@ -15,15 +31,76 @@ main {
   height: calc(100% - 80px);
 }
 
+/* aside */
 aside {
-  background-color: #FFB7B2;
-  width: 300px;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
   height: 100%;
+  background-color: #000;
+  overflow: hidden;
+  padding: 10px 10px 0 10px;
 }
 
+aside a {
+  color: #fff;
+}
+
+.spotify__logo img {
+  width: 80%;
+}
+
+.main_nav__list li {
+  display: flex;
+  align-items: center;
+}
+
+.aside__ico {
+  width: 30px;
+}
+
+.spotify__playlist {
+  height: 200px;
+  overflow: hidden;
+}
+
+.playlist_add {
+  display: inline-block;
+  background-color: #a3a3a3;
+  color: #000;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  line-height: 35px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.playlist__list {
+  height: 100%;
+  overflow: auto;
+}
+
+hr {
+  width: 80%;
+  margin: 10px auto;
+}
+
+.aside__bottom {
+  margin-top: auto;
+  background-color: #000;
+}
+
+.install {
+  display: flex;
+  align-items: center;
+}
+/* /aside */
+
+/* spotify inner */
 .spotify__inner {
   background-color: #B5EAD7;
-  width: calc(100% - 300px);
+  width: calc(100% - 250px);
   position: relative;
 }
 
@@ -31,11 +108,12 @@ aside {
   background-color: rgba(255, 250, 182, .5);
   height: 60px;
   position: fixed;
-  left: 300px;
+  left: 250px;
   top: 0;
   right: 0;
   z-index: 12;
 }
+/* /spotify inner */
 /* /main */
 
 /* footer */
