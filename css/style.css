@@ -6,6 +6,7 @@
 
 body {
   background-color: #141922;
+  font-family: 'Montserrat', sans-serif;
   color: #fff;
   height: 100vh;
 }
@@ -39,15 +40,23 @@ aside {
   height: 100%;
   background-color: #000;
   overflow: hidden;
-  padding: 10px 10px 0 10px;
+  padding: 10px 10px 0 15px;
 }
 
 aside a {
+  color: #666666;
+}
+
+aside a:hover {
   color: #fff;
 }
 
 .spotify__logo img {
-  width: 80%;
+  width: 60%;
+}
+
+.spotify__main_nav {
+  margin: 15px 0 20px 0;
 }
 
 .main_nav__list li {
@@ -55,13 +64,24 @@ aside a {
   align-items: center;
 }
 
+.main_nav__list li a{
+  font-size: 13px;
+}
+
 .aside__ico {
   width: 30px;
+  opacity: 0.7;
 }
 
 .spotify__playlist {
-  height: 200px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   overflow: hidden;
+}
+
+.playlist__create {
+  margin: 10px 0;
 }
 
 .playlist_add {
@@ -77,9 +97,10 @@ aside a {
 }
 
 .playlist__list {
-  height: 100%;
+  height: 70%;
   overflow: auto;
 }
+
 
 hr {
   width: 80%;
@@ -122,3 +143,7 @@ footer {
   height: 80px;
 }
 /* /footer */
+
+/* RESPONSIVE */
+
+/* /RESPONSIVE */
