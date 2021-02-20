@@ -30,6 +30,24 @@ a {
 }
 /* /MIX */
 
+/* TYPO */
+h3 {
+  font-size: 18px;
+  margin: 10px;
+}
+
+h4 {
+  font-size: 13px;
+  opacity: 0.4;
+}
+
+h5 {
+  font-size: 13px;
+  opacity: 0.4;
+  margin-top: 10px;
+}
+/* /TYPO */
+
 /* BUTTONS */
 .btn {
   background-color: transparent;
@@ -73,6 +91,7 @@ aside {
 
 aside a {
   color: #666666;
+  transition: .4s;
 }
 
 aside a:hover {
@@ -97,7 +116,7 @@ aside a:hover {
 }
 
 .main_nav__list li:first-of-type {
-  border-left: 3px solid limegreen;
+  border-left: 3px solid #a0ec2e;
 }
 
 .aside__ico {
@@ -180,7 +199,10 @@ hr {
 .spotify__inner {
   background-color: #141922;
   width: calc(100% - 250px);
+  margin-top: 60px;
+  padding: 0 20px;
   position: relative;
+  overflow: auto;
 }
 
 .upgrade {
@@ -195,6 +217,111 @@ hr {
   right: 0;
   z-index: 12;
 }
+
+.spotify_inner__content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.inner__menu {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.inner__menu li a {
+  padding: 0 10px;
+  font-size: 12px;
+  opacity: .7;
+  transition: .4s;
+}
+
+.inner__menu li a:hover {
+  opacity: 1;
+}
+
+.inner__menu li:first-of-type::after {
+  content: "";
+  display: block;
+  background-color: #a0ec2e;
+  height: 2px;
+  width: 30%;
+  margin: 5px auto;
+}
+
+.row__albums {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px;
+}
+
+.row__title {
+  margin-bottom: 20px;
+}
+
+.albums.recently_played {
+  display: flex;
+  justify-content: space-between;
+}
+
+.album.recently {
+  text-align: center;
+  flex-basis: calc( (100% / 6) - 20px);
+}
+
+.album img {
+  width: 100%;
+}
+
+.album__img {
+  position: relative;
+}
+
+.albums {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  /* background-color: lime; */
+}
+
+.album {
+  text-align: center;
+  flex-basis: calc( (100% / 6) - 20px);
+  margin-right: 20px;
+}
+
+.play {
+  display: none;
+  transition: 1s;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 11;
+}
+
+.play .play__icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+}
+
+.album:hover .play{
+  display: block;
+  cursor: pointer;
+}
+
+.album-rounded {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
 /* /spotify inner */
 /* /main */
 
