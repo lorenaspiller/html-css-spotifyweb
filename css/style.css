@@ -220,13 +220,20 @@ hr {
 
 .spotify_inner__content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
   padding: 10px 0;
 }
 
+.inner__albums {
+  display: flex;
+  flex-direction: column;
+}
+
 .inner__menu {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
 }
@@ -261,14 +268,16 @@ hr {
   margin-bottom: 20px;
 }
 
-.albums.recently_played {
+.albums {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  width: 100%;
 }
 
-.album.recently {
+.album {
   text-align: center;
   flex-basis: calc( (100% / 6) - 20px);
+  margin-right: 20px;
 }
 
 .album img {
@@ -277,19 +286,6 @@ hr {
 
 .album__img {
   position: relative;
-}
-
-.albums {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  /* background-color: lime; */
-}
-
-.album {
-  text-align: center;
-  flex-basis: calc( (100% / 6) - 20px);
-  margin-right: 20px;
 }
 
 .play {
@@ -333,7 +329,32 @@ footer {
 /* /footer */
 
 /* RESPONSIVE */
-@media screen and (max-width: 576px) {
+/* <1300px */
+@media screen and (max-width: 1300px) {
+  .albums {
+    flex-wrap: wrap;
+  }
+
+  .album {
+    flex-basis: calc( (100% / 4) - 20px);
+  }
+}
+/* /<1300px */
+
+/* <768px */
+@media screen and (max-width: 992px) {
+  h3 {
+    font-size: 15px;
+  }
+  .album {
+    flex-basis: calc( (100% / 2) - 20px);
+  }
+}
+/* /<768px */
+
+
+/* <768px */
+@media screen and (max-width: 768px) {
   aside {
     width: 60px;
   }
@@ -349,6 +370,29 @@ footer {
 
   .upgrade {
     left: 60px;
+  }
+
+  .spotify__inner {
+    width: 100%;
+  }
+}
+/* /<768px */
+
+@media screen and (max-width: 576px) {
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 10px;
+  }
+
+  h4 {
+    font-size: 9px;
+  }
+
+  h5 {
+    font-size: 10px;
   }
 }
 /* /RESPONSIVE */
