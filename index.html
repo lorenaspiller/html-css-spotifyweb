@@ -24,8 +24,8 @@
       <aside>
         <!-- spotify logo -->
         <div class="spotify__logo p_left">
-          <img class="logo__small" src="img/logo-small.svg" alt="logo spotify small">
-          <img class="logo__big mobile-hidden" src="img/logo.svg" alt="logo spotify">
+          <a href="" class="mobile-hidden"><img class="logo__big" src="img/logo.svg" alt="logo spotify"></a>
+          <a href="" class="mobile-visible"><img class="logo__small" src="img/logo-small.svg" alt="logo spotify small"></a>
         </div>
         <!-- /spotify logo -->
 
@@ -33,13 +33,31 @@
         <nav class="spotify__main_nav">
           <ul class="main_nav__list">
             <li class="p_left">
-              <img class="aside__ico" src="img/home.svg" alt=""><a href="" class="mobile-hidden">Home</a>
+              <a href="" class="mobile-hidden">
+                <img class="aside__ico" src="img/home.svg" alt="home">
+                Home
+              </a>
+              <a href="" class="mobile-visible">
+                <img class="aside__ico" src="img/home.svg" alt="home">
+              </a>
             </li>
             <li class="p_left">
-              <img class="aside__ico" src="img/search.svg" alt="search"><a href="" class="mobile-hidden">Cerca</a>
+              <a href="" class="mobile-hidden">
+                <img class="aside__ico" src="img/search.svg" alt="search">
+                Cerca
+              </a>
+              <a href="" class="mobile-visible">
+                <img class="aside__ico" src="img/search.svg" alt="search">
+              </a>
             </li>
             <li class="p_left">
-              <img class="aside__ico" src="img/libreria.svg" alt="library"><a href="" class="mobile-hidden">La tua libreria</a>
+              <a href="" class="mobile-hidden">
+                <img class="aside__ico" src="img/libreria.svg" alt="library">
+                La tua libreria
+              </a>
+              <a href="" class="mobile-visible">
+                <img class="aside__ico" src="img/libreria.svg" alt="library">
+              </a>
             </li>
           </ul>
         </nav>
@@ -53,12 +71,12 @@
             <h5 class="text-uppercase">playlist</h5>
 
             <div class="playlist__create">
-              <a href="">
+              <button class="btn btn-aside" href="">
                 <span class="playlist_add">
                   <i class="plus fas fa-plus"></i>
                 </span>
                 Crea Playlist
-              </a>
+              </button>
             </div>
           </div>
           <!-- /playlist top -->
@@ -82,19 +100,23 @@
         <!-- aside bottom -->
         <div class="aside__bottom p_left">
           <!-- installa app -->
-          <div class="install">
-            <img class="download__ico" src="img/download.svg" alt="download">
-            <a href="" class="install__link mobile-hidden">Installa app</a>
-          </div>
+          <button class="btn btn-aside install mobile-hidden"><img class="download__ico" src="img/download.svg" alt="download"> Installa app</button>
+          <button class="btn install mobile-visible"><img class="download__ico" src="img/download.svg" alt="download"></button>
           <!-- /installa app -->
 
           <hr class="mobile-hidden">
 
+          <!-- spotify account -->
           <div class="spotify__account">
-            <img class="profile__ico" src="img/profile.svg" alt="profile">
-            <span class="mobile-hidden">John Doe</span>
+            <div class="account-name mobile-hidden">
+              <img class="profile__ico" src="img/profile.svg" alt="profile">
+              <p>Lorena Spiller</p>
+            </div>
+            <div class="account-name mobile-visible">
+              <img class="profile__ico" src="img/profile.svg" alt="profile">
+            </div>
           </div>
-
+          <!-- /spotify account -->
         </div>
         <!-- /aside bottom -->
       </aside>
@@ -104,7 +126,7 @@
       <div class="spotify__inner">
         <!-- upgrade bar -->
         <div class="upgrade">
-          <a href="" class="btn text-uppercase">effettua l'upgrade</a>
+          <a href="" class="btn btn-upgrade text-uppercase">effettua l'upgrade</a>
         </div>
         <!-- /upgrade bar -->
 
@@ -325,7 +347,44 @@
 
     <!-- play bar -->
     <footer>
+      <!-- current track -->
+      <div class="current_track">
+        <div class="playing_track">
+          <img class="track_image" src="img/sinister.jpeg" alt="sinister album">
 
+          <div class="track_name">
+            <h6>Sinister</h6>
+            <p>Brano Nome</p>
+          </div>
+        </div>
+
+        <div class="track_save">
+          <a href=""><i class="far fa-heart"></i></a>
+          <a href=""><i class="far fa-folder"></i></a>
+        </div>
+      </div>
+      <!-- /current track -->
+
+      <!-- track management -->
+      <div class="track_management">
+
+      </div>
+      <!-- /track management -->
+
+      <!-- track tools -->
+      <div class="track_tools">
+
+        <i class="fas fa-list-ul"></i>
+        <i class="fas fa-desktop"></i>
+        <div class="volume">
+          <i class="fas fa-volume-up"></i>
+          <div class="volume__bar">
+            <i class="volume_drag fas fa-circle"></i>
+          </div>
+        </div>
+
+      </div>
+      <!-- /track tools -->
     </footer>
     <!-- /play bar -->
 
