@@ -50,6 +50,7 @@ h5 {
 
 h6 {
   font-size: 13px;
+  margin-bottom: 5px;
   color: #fff;
 }
 /* /TYPO */
@@ -301,8 +302,9 @@ hr {
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
-  height: 31px;
+  min-height: 31px;
   transition: all 0.7s;
+  margin-bottom: 10px;
 }
 
 .inner__menu li a {
@@ -328,7 +330,7 @@ hr {
 .row__albums {
   display: flex;
   flex-direction: column;
-  margin: 20px 20px;
+  margin: 0px 20px 30px 20px;
 }
 
 .row__title {
@@ -412,7 +414,7 @@ footer a:hover {
 .playing_track {
   display: flex;
   align-items: center;
-  width: 70%;
+  width: 80%;
   margin: 0 10px;
 }
 
@@ -436,7 +438,7 @@ footer a:hover {
 .track_save {
   display: flex;
   flex-wrap: wrap;
-  width: 30%;
+  width: 20%;
 }
 
 .track_save a {
@@ -476,8 +478,9 @@ footer a:hover {
 
 }
 
-.track_tools > a {
+.track_tools a {
   margin: 0 10px;
+  transition: all 0.3s;
 }
 
 .volume {
@@ -488,11 +491,7 @@ footer a:hover {
   margin: 0 10px;
 }
 
-.volume > i {
-  transition: all 0.3s;
-}
-
-.volume > i:hover {
+.track_tools a:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
@@ -575,12 +574,12 @@ footer a:hover {
 .track_status {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 }
 
 .track_status p {
-  font-size: 10px;
+  font-size: 13px;
 }
 /* /footer */
 
@@ -604,6 +603,10 @@ footer a:hover {
   }
   .album {
     flex-basis: calc( (100% / 2) - 20px);
+  }
+
+  .track_name {
+    width: 100%;
   }
 
   .track_save a {
@@ -649,7 +652,7 @@ footer a:hover {
   }
 
   .download__ico {
-    margin: 0 0 0 -3px;
+    margin: 0 0 0 -2px;
   }
 
   .profile__ico {
@@ -688,7 +691,7 @@ footer a:hover {
   }
 
   .playing_track img {
-    width: 20%;
+    width: 15%;
   }
 
   .track_name a h6 {
@@ -718,6 +721,7 @@ footer a:hover {
 
   .volume__bar {
     width: 60%;
+    margin-left: 5px;
   }
 
   .track_save {
@@ -760,13 +764,33 @@ footer a:hover {
   h5 {
     font-size: 10px;
   }
+  .inner__menu {
+    margin-bottom: 10px;
+  }
+
+  .inner__menu li {
+    margin: 3px 0;
+    font-size: 9px;
+  }
+
+  .current_track {
+    padding-left: 40px;
+  }
+
+  .playing_track img {
+    width: 18%;
+  }
 
   .track_save a {
     display: none;
   }
 
-  .track_tools > i {
+  .track_tools > a {
     display: none;
+  }
+
+  .playing_track {
+    width: 70%;
   }
 }
 /* /RESPONSIVE */
