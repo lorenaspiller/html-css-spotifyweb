@@ -118,7 +118,7 @@ aside a {
   transition: .4s;
 }
 
-.main_nav__list li:not(:first-child):hover .aside__ico,
+.main_nav__list li:hover .aside__ico,
 aside a:hover {
   opacity: 1;
   color: #fff;
@@ -141,12 +141,13 @@ aside a:hover {
   font-size: 13px;
 }
 
-.main_nav__list li:first-of-type {
-  border-left: 3px solid #a0ec2e;
+.main_nav__list li {
+  margin-left: 3px;
 }
 
-.main_nav__list li:not(:first-of-type) {
-  margin-left: 3px;
+.main_nav__list li:hover  {
+  border-left: 3px solid #a0ec2e;
+  margin-left: 0;
 }
 
 .aside__ico {
@@ -154,12 +155,6 @@ aside a:hover {
   opacity: 0.7;
   margin-right: 5px;
   vertical-align: middle;
-}
-
-.main_nav__list li:first-of-type a,
-.main_nav__list li:first-of-type .aside__ico {
-  color: #fff;
-  opacity: 1;
 }
 
 .playlist_top {
@@ -180,7 +175,10 @@ aside a:hover {
   margin: 10px 0;
 }
 
-.playlist_add {
+.btn-create::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f067";
   display: inline-block;
   background-color: #a3a3a3;
   color: #000;
@@ -190,6 +188,7 @@ aside a:hover {
   line-height: 35px;
   text-align: center;
   vertical-align: middle;
+  margin-right: 10px;
 }
 
 .playlist__list {
@@ -197,7 +196,7 @@ aside a:hover {
   overflow: auto;
 }
 
-.btn-aside:hover .playlist_add {
+.playlist__create:hover .btn-create::before  {
   background-color: #fff;
 }
 
@@ -214,8 +213,13 @@ aside a:hover {
 }
 
 .download__ico {
-  width: 15px;
+  width: 20px;
   margin-right: 10px;
+  opacity: 0.5;
+}
+
+.aside__bottom button:hover .download__ico{
+  opacity: 1;
 }
 
 hr {
@@ -254,8 +258,6 @@ hr {
 .account-name p {
   display: inline-block;
 }
-
-
 /* /aside */
 
 /* spotify inner */
@@ -299,6 +301,8 @@ hr {
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
+  height: 31px;
+  transition: all 0.7s;
 }
 
 .inner__menu li a {
@@ -312,7 +316,7 @@ hr {
   opacity: 1;
 }
 
-.inner__menu li:first-of-type::after {
+.inner__menu li:hover::after {
   content: "";
   display: block;
   background-color: #a0ec2e;
@@ -352,29 +356,27 @@ hr {
   position: relative;
 }
 
-.play {
-  display: none;
-  transition: 1s;
-  background-color: rgba(0, 0, 0, 0.5);
+.album__img::after {
+  content: "\f144";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 500;
+  font-size: 50px;
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
   right: 0;
-  z-index: 11;
-}
-
-.play .play__icon {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 50px;
-}
-
-.album:hover .play{
-  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+  opacity: 0;
   cursor: pointer;
+}
+
+.album:hover .album__img::after {
+  opacity: 1;
 }
 
 .album-rounded {
@@ -391,6 +393,8 @@ footer {
   height: 80px;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 150;
 }
 
 footer a:hover {
@@ -440,6 +444,30 @@ footer a:hover {
   color: #666666;
 }
 
+.track_save a:first-of-type {
+  transition: all 0.4s;
+}
+
+.track_save .heart {
+  position: relative;
+}
+
+.track_save .heart::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+.track_save:hover .heart::after{
+  opacity: 1;
+}
+
 .track_tools {
   display: flex;
   justify-content: space-around;
@@ -448,7 +476,7 @@ footer a:hover {
 
 }
 
-.track_tools > i {
+.track_tools > a {
   margin: 0 10px;
 }
 
@@ -458,6 +486,15 @@ footer a:hover {
   align-items: center;
   width: 80%;
   margin: 0 10px;
+}
+
+.volume > i {
+  transition: all 0.3s;
+}
+
+.volume > i:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 .track__bar,
@@ -523,12 +560,15 @@ footer a:hover {
   margin: 0 10px;
 }
 
-.track_buttons li:nth-of-type(3) i{
-  font-size: 30px;
-  transition: 0.3s;
+.track_buttons li i {
+  transition: all 0.3s;
 }
 
-.track_buttons li:nth-of-type(3) i:hover {
+.track_buttons li:nth-of-type(3) i{
+  font-size: 30px;
+}
+
+.track_buttons li i:hover {
   transform: scale(1.2);
 }
 
@@ -609,7 +649,7 @@ footer a:hover {
   }
 
   .download__ico {
-    margin: 0 0 0 1px;
+    margin: 0 0 0 -3px;
   }
 
   .profile__ico {
@@ -698,7 +738,7 @@ footer a:hover {
     width: 30%;
   }
 
-  .track_tools i {
+  .track_tools a {
     font-size: 10px;
   }
 }

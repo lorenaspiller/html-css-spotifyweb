@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!-- favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- /favicon -->
+
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,700&display=swap" rel="stylesheet">
@@ -71,12 +75,7 @@
             <h5 class="text-uppercase">playlist</h5>
 
             <div class="playlist__create">
-              <button class="btn btn-aside" href="">
-                <span class="playlist_add">
-                  <i class="plus fas fa-plus"></i>
-                </span>
-                Crea Playlist
-              </button>
+              <button class="btn btn-aside btn-create" href="">Crea Playlist</button>
             </div>
           </div>
           <!-- /playlist top -->
@@ -84,7 +83,7 @@
           <!-- playlist list -->
           <div class="playlist__list">
             <ul class="list">
-              <li><a href="">Nome Playlist</a></li>
+              <li><a href="">Coding Playlist</a></li>
               <li><a href="">Nome Playlist</a></li>
               <li><a href="">Nome Playlist</a></li>
               <li><a href="">Nome Playlist</a></li>
@@ -162,9 +161,6 @@
                   <!-- album img -->
                   <div class="album__img">
                     <img src="img/metal_lifting.jpg" alt="metal">
-                    <div class="play">
-                      <i class="play__icon far fa-play-circle"></i>
-                    </div>
                   </div>
                   <!-- /album img -->
                   <h3>Heavy Metal</h3>
@@ -177,9 +173,6 @@
                   <!-- album img -->
                   <div class="album__img">
                     <img src="img/stranger.jpeg" alt="stranger">
-                    <div class="play">
-                      <i class="play__icon far fa-play-circle"></i>
-                    </div>
                   </div>
                   <!-- /album img -->
                   <h3>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
@@ -192,9 +185,6 @@
                   <!-- album img -->
                   <div class="album__img">
                     <img src="img/aquietplace.jpeg" alt="A quiet place">
-                    <div class="play">
-                      <i class="play__icon far fa-play-circle"></i>
-                    </div>
                   </div>
                   <!-- /album img -->
                   <h3>A quiet place</h3>
@@ -207,9 +197,6 @@
                   <!-- album img -->
                   <div class="album__img">
                     <img src="img/split.jpeg" alt="split">
-                    <div class="play">
-                      <i class="play__icon far fa-play-circle"></i>
-                    </div>
                   </div>
                   <!-- /album img -->
                   <h3>Split</h3>
@@ -222,9 +209,6 @@
                   <!-- album img -->
                   <div class="album__img">
                     <img src="img/cure.jpeg" alt="A cure for wellness">
-                    <div class="play">
-                      <i class="play__icon far fa-play-circle"></i>
-                    </div>
                   </div>
                   <!-- /album img -->
                   <h3>A cure for wellness</h3>
@@ -237,9 +221,6 @@
                   <!-- album img -->
                   <div class="album__img">
                     <img src="img/sinister.jpeg" alt="Sinister">
-                    <div class="play">
-                      <i class="play__icon far fa-play-circle"></i>
-                    </div>
                   </div>
                   <!-- /album img -->
                   <h3>Sinister</h3>
@@ -267,9 +248,6 @@
                   <!-- album img -->
                   <div class="album__img">
                     <img src="img/radar.jpeg" alt="release radar">
-                    <div class="play">
-                      <i class="play__icon far fa-play-circle"></i>
-                    </div>
                   </div>
                   <!-- /album img -->
                   <h3>Release Radar</h3>
@@ -281,9 +259,6 @@
                   <!-- album img -->
                   <div class="album__img">
                     <img src="img/mixdaily.jpeg" alt="daily mix">
-                    <div class="play">
-                      <i class="play__icon far fa-play-circle"></i>
-                    </div>
                   </div>
                   <!-- /album img -->
                   <h3>Daily Mix</h3>
@@ -310,9 +285,6 @@
                   <!-- album img -->
                   <div class="album__img album-rounded">
                     <img src="img/youg.jpeg" alt="lana del rey">
-                    <div class="play">
-                      <i class="play__icon far fa-play-circle"></i>
-                    </div>
                   </div>
                   <!-- /album img -->
                   <h3>Lana del Rey</h3>
@@ -324,9 +296,6 @@
                   <!-- album img -->
                   <div class="album__img album-rounded">
                     <img src="img/einaudi.jpeg" alt="ludovico einaudi">
-                    <div class="play">
-                      <i class="play__icon far fa-play-circle"></i>
-                    </div>
                   </div>
                   <!-- /album img -->
                   <h3>Ludovico Einaudi</h3>
@@ -359,7 +328,7 @@
         </div>
 
         <div class="track_save">
-          <a href=""><i class="far fa-heart"></i></a>
+          <a href="" class="heart"><i class="far fa-heart"></i></a>
           <a href=""><i class="far fa-folder"></i></a>
         </div>
       </div>
@@ -368,11 +337,11 @@
       <!-- track management -->
       <div class="track_management">
         <ul class="track_buttons">
-          <li><a href=""><i class="fas fa-random"></i></a></li>
-          <li><a href=""><i class="fas fa-step-backward"></i></a></li>
-          <li><a href=""><i class="far fa-play-circle"></i></a></li>
-          <li><a href=""><i class="fas fa-step-forward"></i></a></li>
-          <li><a href=""><i class="fas fa-redo-alt"></i></a></li>
+          <li><button class="btn"><i class="fas fa-random"></i></button></li>
+          <li><button class="btn"><i class="fas fa-step-backward"></i></button></li>
+          <li><button class="btn"><i class="far fa-play-circle"></i></button></li>
+          <li><button class="btn"><i class="fas fa-step-forward"></i></button></li>
+          <li><button class="btn"><i class="fas fa-redo-alt"></i></button></li>
         </ul>
         <div class="track_status">
           <p>0:25</p>
@@ -386,12 +355,12 @@
 
       <!-- track tools -->
       <div class="track_tools">
-        <i class="fas fa-list-ul"></i>
-        <i class="fas fa-desktop"></i>
+        <a href=""><i class="fas fa-list-ul"></i></a>
+        <a href=""><i class="fas fa-desktop"></i></a>
         <div class="volume">
           <i class="fas fa-volume-up"></i>
           <div class="volume__bar">
-            <i class="volume_drag fas fa-circle"></i>
+            <a href=""><i class="volume_drag fas fa-circle"></i></a>
           </div>
         </div>
       </div>
