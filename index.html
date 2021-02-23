@@ -353,8 +353,8 @@
           <img class="track_image" src="img/sinister.jpeg" alt="sinister album">
 
           <div class="track_name">
-            <h6>Sinister</h6>
-            <p>Brano Nome</p>
+            <a href=""><h6>Sinister</h6></a>
+            <a href=""><p>Brano Nome</p></a>
           </div>
         </div>
 
@@ -367,13 +367,25 @@
 
       <!-- track management -->
       <div class="track_management">
-
+        <ul class="track_buttons">
+          <li><a href=""><i class="fas fa-random"></i></a></li>
+          <li><a href=""><i class="fas fa-step-backward"></i></a></li>
+          <li><a href=""><i class="far fa-play-circle"></i></a></li>
+          <li><a href=""><i class="fas fa-step-forward"></i></a></li>
+          <li><a href=""><i class="fas fa-redo-alt"></i></a></li>
+        </ul>
+        <div class="track_status">
+          <p>0:25</p>
+          <div class="track__bar">
+            <i class="track_drag fas fa-circle"></i>
+          </div>
+          <p>4:35</p>
+        </div>
       </div>
       <!-- /track management -->
 
       <!-- track tools -->
       <div class="track_tools">
-
         <i class="fas fa-list-ul"></i>
         <i class="fas fa-desktop"></i>
         <div class="volume">
@@ -382,7 +394,6 @@
             <i class="volume_drag fas fa-circle"></i>
           </div>
         </div>
-
       </div>
       <!-- /track tools -->
     </footer>

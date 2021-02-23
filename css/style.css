@@ -251,6 +251,10 @@ hr {
   vertical-align: middle;
 }
 
+.account-name p {
+  display: inline-block;
+}
+
 
 /* /aside */
 
@@ -341,6 +345,7 @@ hr {
 
 .album img {
   width: 100%;
+  display: block;
 }
 
 .album__img {
@@ -397,7 +402,6 @@ footer a:hover {
   justify-content: space-around;
   align-items: center;
   width: 250px;
-  height: 100%;
   color: #666666;
 }
 
@@ -436,31 +440,16 @@ footer a:hover {
   color: #666666;
 }
 
-.track_management {
-  background-color: lime;
-  width: 50%;
-  height: 100%;
-}
-
 .track_tools {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 250px;
-  height: 100%;
+
 }
 
 .track_tools > i {
   margin: 0 10px;
-}
-
-.volume__bar {
-  height: 4px;
-  width: 80%;
-  border-radius: 10px;
-  background-color: #666666;
-  position: relative;
-  cursor: pointer;
 }
 
 .volume {
@@ -471,6 +460,17 @@ footer a:hover {
   margin: 0 10px;
 }
 
+.track__bar,
+.volume__bar {
+  height: 4px;
+  width: 80%;
+  border-radius: 10px;
+  background-color: #666666;
+  position: relative;
+  cursor: pointer;
+}
+
+.track__bar::after,
 .volume__bar::after {
   content: '';
   position: absolute;
@@ -482,10 +482,12 @@ footer a:hover {
   background-color: #fff;
 }
 
-.volume:hover .volume__bar::after{
+.track__bar:hover::after,
+.volume__bar:hover::after{
   background-color: #a0ec2e;
 }
 
+.track_drag,
 .volume_drag {
   position: absolute;
   top: 50%;
@@ -496,11 +498,50 @@ footer a:hover {
   display: none;
 }
 
-.volume:hover .volume_drag {
+.track__bar:hover .track_drag,
+.volume__bar:hover .volume_drag {
   display: block;
 }
 
+.track_management {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-evenly;
+  width: 50%;
+}
 
+.track_buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+
+.track_buttons li{
+  margin: 0 10px;
+}
+
+.track_buttons li:nth-of-type(3) i{
+  font-size: 30px;
+  transition: 0.3s;
+}
+
+.track_buttons li:nth-of-type(3) i:hover {
+  transform: scale(1.2);
+}
+
+.track_status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.track_status p {
+  font-size: 10px;
+}
 /* /footer */
 
 /* RESPONSIVE */
@@ -582,6 +623,84 @@ footer a:hover {
   .spotify__inner {
     width: calc( 100% - 60px);
   }
+
+  footer {
+    flex-wrap: wrap;
+    align-content: space-evenly;
+  }
+
+  .current_track {
+    display: flex;
+    justify-content: center;
+  }
+
+  .track_management {
+    width: 100%;
+    order: -1;
+  }
+
+  .current_track, .track_tools {
+    width: 50%;
+  }
+
+  .playing_track {
+    width: 40%;
+  }
+
+  .playing_track img {
+    width: 20%;
+  }
+
+  .track_name a h6 {
+    font-size: 10px;
+  }
+
+  .track_name a p {
+    font-size: 7px;
+  }
+
+  .track_status {
+    justify-content: space-around;
+    width: 80%;
+  }
+
+  .track_buttons li i {
+    font-size: 10px;
+  }
+
+  .track_buttons li:nth-of-type(3) i {
+    font-size: 16px;
+  }
+
+  .track__bar, .volume__bar {
+    height: 2px;
+  }
+
+  .volume__bar {
+    width: 60%;
+  }
+
+  .track_save {
+    width: 15%;
+  }
+
+  .track_save a {
+    width: 50%;
+    font-size: 10px;
+  }
+
+  .track_tools {
+    justify-content: center;
+  }
+
+  .volume {
+    justify-content: space-around;
+    width: 30%;
+  }
+
+  .track_tools i {
+    font-size: 10px;
+  }
 }
 /* /<768px */
 
@@ -600,6 +719,14 @@ footer a:hover {
 
   h5 {
     font-size: 10px;
+  }
+
+  .track_save a {
+    display: none;
+  }
+
+  .track_tools > i {
+    display: none;
   }
 }
 /* /RESPONSIVE */
